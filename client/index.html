@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <script src="jquery-2.1.4.min.js"></script>
+ <script type="text/javascript">
+
+</script>
+  <title>Realtime communication with WebRTC</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+
+  <h1>Realtime communication with WebRTC</h1>
+  <h1 id="myIdDiv"></h1>
+  <video id="localVideo" controls muted autoplay></video>
+  <video id="remoteVideo" autoplay></video>
+
+  <div>
+    <button id="startButton">Start</button>
+  <input type="text" id ="remoteId">
+    <button id="callButton">Call</button>
+    <button id="hangupButton">Hang Up</button>
+  <button id="pause">pause</button>
+  </div>
+  <label>Start Conversation</label><br>
+<textarea id="dataToSend"     placeholer="type you message bro"></textarea>
+<textarea id = "recievedatachannel"  placeholder=""></textarea>
+<button id="sendDataChannel">send</button>
+  <br><br>
+<!-- code for file transfer  -->
+  <div class="form-group">
+   <label>File input:</label>
+    <input type="file" id="fileInput">
+     <a id="download"></a>
+  </div>
+  <button onclick="sendFile()" class="btn btn-primary">send</button>
+
+
+  <script src="js/lib/adapter.js"></script>
+  <script src="js/main1.js"></script>
+
+</body>
+
+</html>
